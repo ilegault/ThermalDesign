@@ -1,9 +1,7 @@
 import numpy as np
 
-
-# -------------------------------
 # Problem 1: 4-Node Thermal System
-# -------------------------------
+
 def solve_problem1():
     print("\nSolving Problem 1...")
     TA, TB, TC, TD = 300.0, 300.0, 300.0, 300.0
@@ -33,9 +31,8 @@ def solve_problem1():
         print("Problem 1 did not converge")
 
 
-# -------------------------------
 # Problem 2: 12-Node Thermal System
-# -------------------------------
+
 def solve_problem2():
     print("\nSolving Problem 2...")
     T = {f'T{i}': 100.0 for i in range(1, 13)}
