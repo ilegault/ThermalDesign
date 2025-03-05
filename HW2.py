@@ -1,9 +1,11 @@
 import numpy as np
+# Isaac Legault 3/4/2025
+# Both problems are solved using Iterative Gauss-Seidel Method to solve the system of equations
 
 # Problem 1: 4-Node Thermal System
 
 def solve_problem1():
-    print("\nSolving Problem 1...")
+    print("\nProblem 1: 4-Node Thermal System")
     TA, TB, TC, TD = 300.0, 300.0, 300.0, 300.0
     tolerance = 0.1
     max_iter = 1000
@@ -34,7 +36,7 @@ def solve_problem1():
 # Problem 2: 12-Node Thermal System
 
 def solve_problem2():
-    print("\nSolving Problem 2...")
+    print("\nProblem 2: 12-Node Thermal System")
     T = {f'T{i}': 100.0 for i in range(1, 13)}
     tolerance = 0.1
     max_iter = 1000
