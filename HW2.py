@@ -14,11 +14,11 @@ def solve_problem1():
     for iter in range(max_iter):
         old = [TA, TB, TC, TD]
 
-        # Update equations
-        TA = (900 + TB) / 3
-        TB = (500 + TA + TC) / 3
-        TC = (500 + TB + TD) / 3
-        TD = (500 + TC) / 2
+        # Fundamental equations
+        TA = (1000 + TB) / 4
+        TB = (600 + TA + TC) / 4
+        TC = (600 + TB + TD) / 4
+        TD = (600 + TC) / 3
 
         # Check residuals
         residuals = np.abs([TA - old[0], TB - old[1], TC - old[2], TD - old[3]])
@@ -46,7 +46,6 @@ def solve_problem2():
         old_T = T.copy()
         residuals = []
 
-        # Update equations for each node
         # First row (insulated top)
         T['T1'] = (2 * T['T4'] + T['T2'] + 100) / 4
         residuals.append(abs(T['T1'] - old_T['T1']))
@@ -103,9 +102,7 @@ def solve_problem2():
         print("Problem 2 did not converge")
 
 
-# -------------------------------
 # Main Execution
-# -------------------------------
 if __name__ == "__main__":
     solve_problem1()
     solve_problem2()
